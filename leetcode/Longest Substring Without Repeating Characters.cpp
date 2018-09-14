@@ -1,3 +1,8 @@
+// # https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
+// # Given a string, find the length of the longest substring without repeating characters.
+// # Input: "abcabcbb"
+// # Output: 3 
+// # Explanation: The answer is "abc", with the length of 3. 
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
