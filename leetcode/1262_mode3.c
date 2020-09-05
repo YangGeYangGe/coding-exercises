@@ -1,4 +1,6 @@
 /*
+https://leetcode-cn.com/problems/greatest-sum-divisible-by-three/
+
 dp[i][mode]:
 dp[i][0]
 dp[i][1]
