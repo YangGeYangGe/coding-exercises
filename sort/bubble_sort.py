@@ -11,4 +11,4 @@ def BubbleSort(l:list):
 
 if __name__ == '__main__':
     l = [3,5,1,2,547,6,12,65,2,7,1347,23]
-    print(BubbleSort(l))
+    print(BubbleSort(l)) 
