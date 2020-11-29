@@ -106,3 +106,43 @@ void postOrderTraversal(vector<int> &store, TreeNode *root) {
     return;
 }
 ```
+
+#### (4) 二叉树的深度
+```cpp
+int TreeDepth(TreeNode *pRoot)
+{
+    return pRoot ? 1 + max(TreeDepth(pRoot->left), TreeDepth(pRoot->right)) : 0;
+}
+
+int TreeDepth(TreeNode *pRoot)
+{
+    queue<TreeNode *> Q;
+    Q.push(pRoot);
+    int depth = 0;
+    while (!Q.empty()) {
+        int len = Q.size();
+        ++depth;
+        while (len--) {
+            TreeNode *curr_node = Q.front();
+            Q.pop();
+            if (curr_node) {
+                Q.push(curr_node->left);
+                Q.push(curr_node->right);
+            }
+        }
+    }
+}
+```
+
+#### (5) 二叉树的镜像
+```cpp
+void Mirror(TreeNode *pRoot)
+{
+    if (pRoot && (pRoot->left || pRoot->right)) {
+        std::swap(pRoot->left, pRoot->right);
+        Mirror(pRoot->left);
+        Mirror(pRoot->right);
+    }
+    return;
+}
+```
